@@ -142,9 +142,9 @@
 
                 <a class="bottone" href="/cart"> <i class="fas fa-shopping-cart pr-3"></i> </a>
 
-                <button type="button" class="btn profilo bottone" id="login-btn">
-                    <i class="fas fa-user"></i>
-                </button>
+                @if(Auth::check())
+                    <a class="bottone" href="/profile/{{ Auth::id() }}"><i class="fas fa-user"></i></a>
+                @endif
             </div>
         </div>
     </div>

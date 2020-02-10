@@ -84,7 +84,7 @@
 
                         @csrf
                         <div class="left_payment">
-                        <div class="pay_form1">
+                        <div class="pay_form1 marg">
                             <h6> seleziona un metodo di pagamento...</h6>
                             <input name="libri" type="hidden" value="{{ $libri }}" >
                             <select name="pay_method">
@@ -97,7 +97,7 @@
 
                             </select>
 
-                            <input type="submit" value="paga con il metodo selezionato">
+                            <button class="bottone" type="submit"><i class="fas fa-check-circle"></i></button>
                         </div>
                             <div class="totale"> <h1>TOT: {{$tot}}€</h1></div>
                         </div>
@@ -106,22 +106,22 @@
 
                     <form method="POST" action="pay" enctype="multipart/form-data">
                         @csrf
-                        <div class="pay_form2">
-                            <h6> ... altrimenti inseriscine uno nuovo </h6>
+                        <div class="pay_form2 marg">
+                            <h6> ... altrimenti paga con uno nuovo </h6>
                             <input name="libri" type="hidden" value="{{ $libri }}" >
-                            <div><label class="pay_label">Titolare:</label><input name="nome_titolare" type="text" required></div>
-                            <div><label class="pay_label">Numero carta:</label><input name="card_num" type="number" required></div>
+                            <div><label class="pay_label">Titolare:</label><input class="input-important" name="nome_titolare" type="text" required></div>
+                            <div><label class="pay_label">Numero carta:</label><input class="input-important" name="num_carta" type="number" required></div>
 
 
                             <div class="date">
-                                <label class="pay_label">Scadenza carta:</label><input name="mese" type="number" min="01" max="12" required><input name="anno" type="number" min="2020" max="2099" required>
+                                <label class="pay_label">Scadenza carta:</label><input class="input-expire" name="mese" type="number" min="01" max="12" required>
+                                <input class="input-expire" name="anno" type="number" min="20" max="99" required>
                             </div>
 
-                            <label class="pay_label">cvv:</label><input name="cvv" type="number" maxlength="3" required>
-
+                            <label class="pay_label">cvv:</label><input name="cvv" class="input-cvv" type="number" maxlength="3" required>
                             <div><input name="save_payment" type="checkbox"><label for="save_payment">&nbsp;&nbsp;vuoi salvare il metodo di pagamento inserito?</label></div>
 
-                            <input id="pay_new_meth" type="submit" value="paga con il nuovo metodo di pagamento ">
+                            <button class="bottone" type="submit"><i class="fas fa-check-circle"></i></button>
                         </div>
 
 

@@ -282,9 +282,7 @@
 .fa, .fas{
     color: black;
 }
-.date > input{
-    width: 70px;
-}
+
 
 .pay_label{
     width: 120px;
@@ -295,7 +293,7 @@
     left: calc(50% - 152px);
 }
 
-.pay_form1, .pay_form2{
+.marg{
     margin: 10px;
 
 }
@@ -401,13 +399,12 @@
 }
 
 .cambia-email{
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
     width: 400px;
     height: 170px;
     position: relative;
     left: 30px;
-    padding: 10px;
+    padding-left: 5%;
 }
 
 .field-profilo{
@@ -438,6 +435,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
+    padding: 5px;
 }
 
 .paymethod-delete > button{
@@ -452,5 +450,62 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cambia-email > div > form > button {
+    float: right;
+    padding-right: calc(55% - 15px);
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.input-important{
+    width: 200px;
+}
+
+.input-cvv{
+    width: 60px;
+    padding-left: 10px;
+}
+
+.input-expire{
+    width: 30px;
+    padding-left: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]{
+    border-radius: 3px;
+}
+
+input[type=text]{
+    border-radius: 3px;
+}
+
+.pay_form2 > button{
+    padding-left: calc(55% - 15px);
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.pay_form1 > select{
+    border-radius: 3px;
+}
+
+.pay_form1 > button{
+    padding-left: calc(55% - 15px);
+    padding-top: 10px;
+    font-size: 30px;
 }
 
