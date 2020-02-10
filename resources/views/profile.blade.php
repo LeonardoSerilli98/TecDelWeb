@@ -57,7 +57,7 @@
                     <div>
                         <form method="post" action="/profile/{{ $id }}">
                             @csrf
-                            <label class="profile-label">nuova email</label><input type="email" name="email" class="field-profilo">
+                            <label class="profile-label">nuova email</label><input type="email" name="email" class="field-profilo" required>
                             <button class="bottone" type="submit"><i class="fas fa-check-circle"></i></button>
                         </form>
                     </div>
@@ -70,8 +70,8 @@
                     <div>
                         <form method="post" action="/profile/{{ $id }}">
                             @csrf
-                            <label class="profile-label">nuova password</label><input type="password" name="password" class="field-profilo">
-                            <label class="profile-label">conferma password</label><input type="password" name="confirm-password" class="field-profilo">
+                            <label class="profile-label">nuova password</label><input type="password" name="password" class="field-profilo" required>
+                            <label class="profile-label">conferma password</label><input type="password" name="confirm-password" class="field-profilo" required>
                             <button class="bottone" type="submit"><i class="fas fa-check-circle"></i></button>
                         </form>
                     </div>
