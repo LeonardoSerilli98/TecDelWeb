@@ -13,9 +13,10 @@
                         <form method="get" action="/paymethods/{{ $metodo->id }}">
 
                             <div class="paymethod-delete">
-                                <h6> Titolare: {{ $metodo->nome_titolare  }}</h6>
+                               <div> <label class="paymet_label">Titolare:</label><h6>{{ $metodo->nome_titolare  }}</h6></div>
                                 <div>
-                                    <h6>carta: {{ $metodo->num_carta }}</h6>
+                                    <label class="paymet_label">Carta:</label>
+                                    <h6>{{ $metodo->num_carta }}</h6>
                                     <button class="bottone" type="submit"><i class="fas fa-backspace"></i></button>
                                 </div>
                             </div>
