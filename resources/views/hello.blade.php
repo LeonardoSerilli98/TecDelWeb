@@ -21,7 +21,7 @@
                         <!-- Post Thumb -->
                         <img src="{{ asset('storage/'.$lib->img) }}" alt="">
                         <!-- trama --->
-                        <h6 class="slider-text">{{$lib->trama}}</h6>
+                        <div class="trama_slider"><h6 class="slider-text">{{$lib->trama}}</h6></div>
                     </div>
                     <!-- Overlay Text -->
                     <div class="project_title">
@@ -59,7 +59,7 @@
                         <!-- Post Thumb -->
                         <img src="{{ asset('storage/'.$lib->img) }}" alt="">
                         <!-- trama --->
-                        <h6 class="slider-text">{{$lib->trama}}</h6>
+                        <div class="trama_slider"><h6 class="slider-text">{{$lib->trama}}</h6></div>
                     </div>
                     <!-- Overlay Text -->
                     <div class="project_title">
@@ -95,7 +95,7 @@
                         <!-- Post Thumb -->
                         <img src="{{ asset('storage/'.$lib->img) }}" alt="">
                         <!-- trama --->
-                        <h6 class="slider-text">{{$lib->trama}}</h6>
+                        <div class="trama_slider"><h6 class="slider-text">{{$lib->trama}}</h6></div>
                     </div>
                     <!-- Overlay Text -->
                     <div class="project_title">

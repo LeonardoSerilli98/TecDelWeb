@@ -35,13 +35,16 @@
                                 <h4 class="post-headline">{{$lib->titolo}}</h4>
                             </a>
 
-                            <div class="descrizione-wishlist">
+                            <div class="prezzo">
+                                <h5>{{$lib->prezzo}}€</h5>
+                                <br>
+                            </div>
+
+                            <div class="descrizione-wishlist1">
                                 <h6>{{$lib->trama}}</h6>
                             </div>
 
-                            <div class="prezzo">
-                                <h5>{{$lib->prezzo}}€</h5>
-                            </div>
+
 
 
                             <div class="audio_player">

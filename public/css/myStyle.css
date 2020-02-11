@@ -111,7 +111,7 @@
 .post-comment-share-area {
 
     position: absolute;
-    left: 980px;
+    left: 960px;
     top: 460px;
 
 }
@@ -126,8 +126,19 @@
 
 .descrizione-wishlist {
     width: 600px;
+    height: 120px;
     overflow: hidden;
 }
+
+.descrizione-wishlist1 {
+    width: 600px;
+    height: 340px;
+    overflow: hidden;
+
+}
+
+
+
 
 .form-box {
     position: fixed;
@@ -196,7 +207,7 @@
 }
 
 .post-comment-share-area{
-    width: 190px;
+    width: 250px;
     height: 30px;
 }
 
@@ -444,19 +455,30 @@
     left: calc(50% - 50px);
     bottom: 10px;
 }
-
-.paymethod-delete > div{
-    width: 100%;
+.carta{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.paymethod-delete > div{
+    width: 100%;
+    display: flex;
+}
+.paymethod-delete > div > label{
+   width: 110px;
+}
+
+
 .cambia-email > div > form > button {
     float: right;
     margin-right: calc(50% - 15px);
+<<<<<<< Updated upstream
     margin-top: 0;
+=======
+>>>>>>> Stashed changes
     font-size: 30px;
+
 }
 
 .input-important{
@@ -508,4 +530,10 @@ input[type=text]{
     margin-top: 10px;
     font-size: 30px;
 }
+
+.trama_slider{
+    height: 185px;
+    overflow: hidden;
+}
+
 
