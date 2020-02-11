@@ -60,11 +60,9 @@
                     <div>
                         <form method="post" action="/profile/{{ $id }}">
                             @csrf
-<<<<<<< Updated upstream
+
                             <label class="profile-label">nuova email</label><input type="email" name="email" class="field-profilo @error('email') is-invalid @enderror" required >
-=======
-                                 <label class="profile-label">nuova email</label><input type="email" name="email" class="field-profilo @error('email') is-invalid @enderror" required >
->>>>>>> Stashed changes
+
                             @error('email')
                                 <div class="alert alert-danger">la email inserita non è corretta</div>
                             @enderror
@@ -80,17 +78,12 @@
                     <div>
                         <form method="post" action="/profile/{{ $id }}">
                             @csrf
-<<<<<<< Updated upstream
+
                             <label class="profile-label">nuova password</label><input type="password" name="password" class="field-profilo" required>
                             <label class="profile-label">conferma password</label><input type="password" name="confirm_password" class="field-profilo @error('confirm_password') is-invalid @enderror" required>
                             @error('confirm_password')
                                 <div class="alert alert-danger">le password non sono uguali</div>
-=======
-                                  <label class="profile-label">nuova password</label><input type="password" name="password" class="field-profilo" required>
-                                  <label class="profile-label">conferma password</label><input type="password" name="confirm_password" class="field-profilo @error('confirm_password') is-invalid @enderror" required>
-                            @error('confirm_password')
-                                   <div class="alert alert-danger">le password non sono uguali</div>
->>>>>>> Stashed changes
+
                             @enderror
                             <button class="bottone" type="submit"><i class="fas fa-check-circle"></i></button>
                         </form>
