@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-
+    //prende i dati necessari alla home page
     public function index()
     {
         $riprendiAscolto =  Audiobook::select('audiobooks.id', 'audiobooks.titolo', 'audiobooks.num_upvote', 'audiobooks.num_vendite', 'audiobooks.prezzo', 'audiobooks.img', 'authors.autore', 'categories.categoria', 'audiobooks.trama', 'authors.id as id_autore', 'categories.id as id_categoria' )
@@ -37,5 +37,5 @@ class WelcomeController extends Controller
         return view('hello')->with('libriSlides', $libriSlides);
     }
 
-  
+
 }

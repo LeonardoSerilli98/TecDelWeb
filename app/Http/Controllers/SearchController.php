@@ -9,7 +9,7 @@ use App\Audiobook;
 
 class SearchController extends Controller
 {
-
+    //esegue una ricerca filtrando tra le categorie, gli autori ed il titolo dei libri
     public function getSearch(Request $search){
 
         $success = true;

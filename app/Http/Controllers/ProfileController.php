@@ -9,13 +9,15 @@ use App\PaymentMethod;
 class ProfileController extends Controller
 {
 
-
+    //raccoglie i dati necessari dal database e ritorna la view del profilo
     public function show($id)
     {
         $metodi = PaymentMethod::where('payment_methods.id_utente', '=', Auth::id())->get();
         return view('profile')->with('id', $id)->with('metodi', $metodi);
     }
 
+
+    //permette di cambiare email o password al profilo attualmente autenticato
     public function update(Request $request, $id)
     {
         if($request->has('password')){

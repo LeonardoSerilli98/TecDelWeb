@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 
 class WishlistController extends Controller
 {
+
+    //prende dal database i libri nella wishilist dell'utente autenticato
     public function index()
     {
         $autenticato = Auth::check();
@@ -31,6 +33,7 @@ class WishlistController extends Controller
     }
 
 
+    //aggiunge un libro alla wishlist dell'utente autenticato
     public function store(Request $request)
     {
 

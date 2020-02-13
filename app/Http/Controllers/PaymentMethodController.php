@@ -78,7 +78,7 @@ class PaymentMethodController extends Controller
                 return redirect('/payed1')->with('todo', 'non hai selezionato alcun metodo di pagameto, ');
 
             self::payment($request->libri);
-            return redirect('/payed')->with('todo', 'Il pagamento è stato portato a termine con successo, ');
+            return redirect('/payed')->with('todo', 'Il pagamento è stato portato a termine con successo,');
 
         }
 

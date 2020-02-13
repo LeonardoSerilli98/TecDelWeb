@@ -8,7 +8,7 @@ use \Illuminate\Support\Facades\Auth;
 
 class upvoteController extends Controller
 {
-
+    //registra il tuo upvote ad un libro se sei registrato e non lo hai gia votato in precedenza
     public function store(Request $request)
     {
         if(!(Auth::check())){
