@@ -16,11 +16,9 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
+Route::get('/', 'WelcomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/payed', 'PaymentMethodController@index');
-Route::get('/payed1', 'PaymentMethodController@index1');
-Route::post('/pay', 'PaymentMethodController@pay');
+
 
 Route::resource('/cart', 'CartController', [
     'names' => [
@@ -41,16 +39,22 @@ Route::resource('/rating', 'UpvoteController', [
 ]);
 
 Route::get('/search', ['uses' =>'SearchController@getSearch', 'as'=>'search']);
+Route::resource('/results', 'SearchController');
+
+Route::resource('/books', 'AudiobookController');
+Route::resource('/boughts', 'BoughtController');
+
 Route::resource('/categories','CategoriesController');
 Route::resource('/authors', 'AuthorsController');
-Route::resource('/', 'WelcomeController');
-Route::resource('/books', 'AudiobookController');
+
 Route::resource('/wishlist', 'WishlistController');
-Route::resource('/results', 'SearchController');
-Route::resource('/boughts', 'BoughtController');
 Route::resource('/collections','CollecionsController');
+
 Route::get('/profile/{id}', 'ProfileController@show')->middleware('auth');
 Route::post('/profile/{id}', 'ProfileController@update')->middleware('auth');
+
+Route::get('/payed', 'PaymentMethodController@index');
+Route::post('/pay', 'PaymentMethodController@pay');
 Route::get('/paymethods/{id}', 'PaymentMethodController@destroy')->middleware('auth');
 Route::post('/paymethods', 'PaymentMethodController@store')->middleware('auth');
 

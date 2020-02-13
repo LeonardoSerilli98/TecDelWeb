@@ -12,17 +12,12 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentMethodController extends Controller
 {
-
+    //ritorna la view di pagamento effettuato con il relativo esito tramite il redirect del metodo pay
     public function index()
     {
         return view('payed');
     }
-
-    public function index1()
-    {
-        return view('payed1');
-    }
-
+    //si occupa di salvare i nuovi metodi di pagamento
     public function store(Request $request)
 
     {
@@ -34,7 +29,7 @@ class PaymentMethodController extends Controller
         $metodi = PaymentMethod::where('payment_methods.id_utente', '=', Auth::id())->get();
         return view('profile')->with('id', Auth::id())->with('metodi', $metodi);
     }
-
+//per la rimozione dei metodi di pagamento
     public function destroy($id)
     {
         $metodo = PaymentMethod::find($id);
@@ -44,6 +39,7 @@ class PaymentMethodController extends Controller
         return view('profile')->with('id', Auth::id())->with('metodi', $metodi);
     }
 
+    //si occupa dell'acquisto di un libro e ei trigger che genera
     public function payment($acquisti){
 
         $acquisti = json_decode($acquisti, true);
@@ -69,16 +65,22 @@ class PaymentMethodController extends Controller
         }
     }
 
+    //si occupa della verifica che il pagamento vada a buon fine restituendone l'esito ramite il redirect alla view "payed"
     public function pay(Request $request)
     {
 
+        $success = true;
+
         if(($request->has('pay_method'))){
 
-            if($request->pay_method == 0)
-                return redirect('/payed1')->with('todo', 'non hai selezionato alcun metodo di pagameto, ');
+            if($request->pay_method == 0){
+                $success = false;
+                return redirect('/payed')->with('todo', 'non hai selezionato alcun metodo di pagameto, ')->with('successo', $success);
+            }
 
             self::payment($request->libri);
-            return redirect('/payed')->with('todo', 'Il pagamento è stato portato a termine con successo,');
+
+            return redirect('/payed')->with('todo', 'Il pagamento è stato portato a termine con successo, ')->with('successo', $success);
 
         }
 

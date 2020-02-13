@@ -10,33 +10,20 @@ class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    //rende i campi mass assignable, cioè che possono essere assegnati da script automatiche del serve (ad esempio il cambia password o mail nella view del profilo utente
     protected $fillable = [
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
+    //si occupa di criptare la password prima di salvarla nel database
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);

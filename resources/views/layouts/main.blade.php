@@ -25,7 +25,7 @@
     <script src="https://kit.fontawesome.com/58f01e1ae9.js" crossorigin="anonymous"></script>
 
 
-    <title>Laravel</title>
+    <title>Opus</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -152,7 +152,7 @@
 
 </div>
 <!-- ****** Top Header Area End ****** -->
-<a href="/" class="titolo">saaaaaaaaaas</a>
+<a href="/" class="titolo">OPUS</a>
 <!-- ****** Header Area Start ****** -->
 <header class="header_area">
     <div class="container">

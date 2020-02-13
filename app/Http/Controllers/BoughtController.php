@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class BoughtController extends Controller
 {
+    //ritorna la view deila libreria personale contenente tutti gli acquisti effettuati
 
     public function index()
     {

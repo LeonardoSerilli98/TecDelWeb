@@ -11,7 +11,7 @@ use \Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-
+    //Ritorna la view del carrello
     public function index()
     {
         $autenticato =  Auth::check();
@@ -37,10 +37,15 @@ class CartController extends Controller
         $payMethods = PaymentMethod::where('payment_methods.id_utente', '=', Auth::id())->get();
 
 
-        return view('cart')->with('libri', $libri)->with('auth', $autenticato)->with('hasCart', $hasCart)->with('pay_met', $payMethods)->with('tot', $tot);
+        return view('cart')
+            ->with('libri', $libri)
+            ->with('auth', $autenticato)
+            ->with('hasCart', $hasCart)
+            ->with('pay_met', $payMethods)
+            ->with('tot', $tot);
     }
 
-
+    //si occupa di salvare i nuovi acquisti nel carrello
     public function store(Request $request)
     {
 
