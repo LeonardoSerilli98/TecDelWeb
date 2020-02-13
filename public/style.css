@@ -512,7 +512,7 @@ li {
     overflow: hidden;
     height: 200px;
     border-radius: 4px;
-    background-color: #6a737d;
+    background-color: rgba(0,0,0,0.8);
 
 
 

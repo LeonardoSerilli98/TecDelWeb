@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Bought;
 use App\Cart;
-use App\Audiobook;
 use Illuminate\Http\Request;
 use App\PaymentMethod;
 use App\Wishlist;
@@ -13,11 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentMethodController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         return view('payed');
@@ -28,22 +23,6 @@ class PaymentMethodController extends Controller
         return view('payed1');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
 
     {
@@ -56,46 +35,6 @@ class PaymentMethodController extends Controller
         return view('profile')->with('id', Auth::id())->with('metodi', $metodi);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $metodo = PaymentMethod::find($id);

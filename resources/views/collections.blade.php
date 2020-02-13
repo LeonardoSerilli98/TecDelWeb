@@ -35,7 +35,7 @@
         <div class="container d-flex flex-row flex-wrap col-12 justify-content-md-center">
             <!-- da generare automaticamente -->
             @foreach($collezione as $col)
-                <div class="categoria">
+                <div class="categoria1">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">
                         <img src="{{ asset('storage/'.$col->img) }}" alt="">
                         <div class="catagory-title">

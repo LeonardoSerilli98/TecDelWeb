@@ -39,11 +39,16 @@
 }
 
 .categoria {
+    height: 290px;
+    width: 250px;
+    padding: 20px;
+}
+
+.categoria1 {
     height: 230px;
     width: 300px;
     padding: 20px;
 }
-
 .autore {
     position: relative;
     z-index: 1;
@@ -53,29 +58,42 @@
 .autore-text {
     width: 200px;
     height: 50px;
-    background-color: rgba(100%, 100%, 100%, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 75%;
     text-align: center;
     border-radius: 30px;
-    left: calc(50% - 15px);
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
 }
 
+.autore:hover .autore-text {
+    background-color:  rgba(255, 255, 255, 0.8);;
+}
+
+.autore:hover .autore-text a > h5 {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
 .autore-text a > h5 {
     margin-bottom: 0;
     line-height: 50px;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
+    color: white;
 }
+
+
+
 
 .autore img {
     border-radius: 10px;
     height: 270px;
-    width: 230px;
+    width: 220px;
 }
 
 .results-image {
@@ -132,7 +150,7 @@
 
 .descrizione-wishlist1 {
     width: 600px;
-    height: 340px;
+    height: 180px;
     overflow: hidden;
 
 }
@@ -386,7 +404,7 @@
 
 .audio_player{
     position: relative;
-    top: 50px;
+    top: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -412,7 +430,7 @@
 .cambia-email{
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     width: 400px;
-    height: 170px;
+    height: 120px;
     position: relative;
     left: 30px;
     padding-left: 5%;
@@ -533,3 +551,17 @@ input[type=text]{
 }
 
 
+.bckProfilo{
+    position: relative;
+    width: 1330px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    right: 10px;
+    left: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.ProfInput{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
