@@ -37,7 +37,9 @@
             @foreach($categorie as $cat)
                 <div class="categoria1">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">
+                        <a href="{{url('categories/'.$cat->id)}}">
                         <img src="{{ asset('storage/'.$cat->img) }}" alt="">
+                        </a>
                         <div class="catagory-title">
                             <a href="{{url('categories/'.$cat->id)}}">
                                 <h5>{{$cat->categoria}}</h5>

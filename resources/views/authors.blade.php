@@ -38,9 +38,13 @@
             <!-- da generare automaticamente -->
             @foreach($autori as $aut)
                 <div class="categoria">
+
                     <div class="autore wow fadeInUp" data-wow-delay=".3s">
+                        <a href="/authors/{{$aut->id}}">
                         <img src="{{ asset('storage/'.$aut->img) }}" alt="">
+                    </a>
                         <div class="autore-text">
+
                             <a href="/authors/{{$aut->id}}">
                                 <h5>{{$aut->autore}}</h5>
                             </a>

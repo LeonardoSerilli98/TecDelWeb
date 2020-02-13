@@ -11,9 +11,11 @@
                         <div class="single-wishlist">
                             <div class="single-post wow fadeInUp post-wishlist" data-wow-delay="0.1s">
                                 <!-- Post Thumb -->
+                                <a href="{{URL::route('books.show', $lib->id)}}">
                                 <div class="post-thumb results-image">
                                     <img class="wishimage" src="{{asset('storage/'.$lib->img)}}" alt="">
                                 </div>
+                                </a>
                                 <!-- Post Content -->
                                 <div class="post-content">
                                     <div class="post-meta d-flex">

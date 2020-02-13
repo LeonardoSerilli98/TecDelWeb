@@ -37,8 +37,11 @@
             @foreach($collezione as $col)
                 <div class="categoria1">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">
+                        <a href="{{URL::route('books.show', $lib->id)}}" style="">
                         <img src="{{ asset('storage/'.$col->img) }}" alt="">
+                        </a>
                         <div class="catagory-title">
+
                             <a href="{{url('collections/'.$col->id)}}">
                                 <h5>{{$col->collezione}}</h5>
                             </a>

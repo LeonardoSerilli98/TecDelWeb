@@ -41,9 +41,11 @@
                                 <div class="single-cart-item">
                                     <div class="single-post wow fadeInUp post-wishlist" data-wow-delay="0.1s">
                                         <!-- Post Thumb -->
+                                        <a href="{{URL::route('books.show', $lib->id)}}" style="">
                                         <div class="post-thumb results-image">
                                             <img class="cartimage" src="{{asset('storage/'.$lib->img)}}" alt="">
                                         </div>
+                                        </a>
                                         <!-- Post Content -->
                                         <div class="post-content">
                                             <a href="{{URL::route('books.show', $lib->id)}}" style="">
